@@ -1,23 +1,39 @@
 # Librerias y modulos a importar #
 
-from time import time, sleep
-from telegram import MessageEntity
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+# from time import time, sleep
+# from telegram import MessageEntity
+# from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 ####################################################################################################
 
 # Constantes #
 
-# Token del Bot (obtenerlo de @BotFather)
-TOKEN = "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# # Token del Bot (obtenerlo de @BotFather)
+# TOKEN = "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
 # ID del grupo al que queremos que el bot envie un mensaje cada minuto (el Bot debe de estar en 
 # dicho grupo)
-CHAT_ID = -000000000
+# CHAT_ID = -000000000
 
 
 
-name: discord message test
+# name: discord message test
+# on: [push]
+# jobs:
+
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: send custom message with args
+#       uses: appleboy/discord-action@master
+#       with:
+#         webhook_id: ${{ secrets.WEBHOOK_ID }}
+#         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+#         args: The ${{ github.event_name }} event triggered first step.
+
+name: telegram message test
 on: [push]
 jobs:
 
@@ -29,7 +45,6 @@ jobs:
     - name: send custom message with args
       uses: appleboy/discord-action@master
       with:
-        webhook_id: ${{ secrets.WEBHOOK_ID }}
-        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        # webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.Token }}
         args: The ${{ github.event_name }} event triggered first step.
-
